@@ -2,13 +2,12 @@
 
 ###### Gece ve Gündüz Tasarımları
 
-<img src="Screenshot_1628705967.png" style="zoom:20%;"> <img src="Screenshot_1628705944.png" style="zoom:20%;" />
+<img width="300" src="Screenshot_1628705967.png"> <img width="300" src="Screenshot_1628705944.png"  />
 
 ##### İngilizce ve Türkçe Tasarımları
 
-<img src="Screenshot_1628705967.png" style="zoom:20%;"><img src="Screenshot 2021-08-11 212221.png" style="zoom:63%;" />
+<img width="300"  src="Screenshot_1628705967.png"><img width="300" src="Screenshot 2021-08-11 212221.png" />
 
 ##### Icon Tasarımları
 
-<img src="C:\Users\kemal\Documents\github\AndroidDEV\tasarimCalismasi\app\src\main\res\mipmap-xxxhdpi\uygulama_icon.png"  />
-
+<img width="300" src="C:\Users\kemal\Documents\github\AndroidDEV\tasarimCalismasi\app\src\main\res\mipmap-xxxhdpi\uygulama_icon.png"  />
