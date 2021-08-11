@@ -10,4 +10,4 @@
 
 ##### Icon Tasarımları
 
-<img width="300" src="C:\Users\kemal\Documents\github\AndroidDEV\tasarimCalismasi\app\src\main\res\mipmap-xxxhdpi\uygulama_icon.png"  />
+<img width="300" src="app\src\main\res\mipmap-xxxhdpi\uygulama_icon.png"  />
