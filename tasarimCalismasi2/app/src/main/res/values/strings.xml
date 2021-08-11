@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">tasarimCalismasi2</string>
+    <string name="urunAdi">Lahmacun</string>
+    <string name="fiyat">$10</string>
+    <string name="adet">(1 pc)</string>
+    <string name="puan">5.00</string>
+    <string name="aciklama">Lahmacun is a round, thin piece of dough topped with minced meat minced vegetables and herbs including onions, garlic, tomatoes, red peppers, and parsley, and spices such as chili pepper, paprika, and cinnamon, then baked.Lahmacun is often wrapped around vegetables, including pickles, tomatoes, peppers, onions, lettuce, parsley, and roasted eggplant.</string>
+    <string name="ilgiliUrunler">Related Items</string>
+    <string name="sepeteEkle">Add To Cart</string>
+    <string name="iyiDilek">Have a nice day</string>
+</resources>

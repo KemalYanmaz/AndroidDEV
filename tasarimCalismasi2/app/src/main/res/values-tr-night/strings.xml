@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">tasarimCalismasi2</string>
+    <string name="urunAdi">Lahmacun</string>
+    <string name="fiyat">₺10</string>
+    <string name="adet">(1 adet)</string>
+    <string name="puan">5.00</string>
+    <string name="aciklama"> Lahmacun, açılmış hamurun üzerine kıyma, maydanoz, soğan, sarımsak ve karabiber, isot (kırmızı biber) gibi baharatlarla hazırlanan malzeme sürüldükten sonra taş fırında pişirilmesiyle yapılan Orta Doğu mutfağında bir çeşit içli pidedir.Pizzadan farklı olarak peynir kullanılmaz ve hamur daha incedir. </string>
+    <string name="ilgiliUrunler">İlgili Ürünler</string>
+    <string name="sepeteEkle">Sepete Ekle</string>
+    <string name="iyiDilek">İyi Geceler</string>
+</resources>
