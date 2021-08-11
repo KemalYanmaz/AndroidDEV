@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">tasarimCalismasi</string>
+    <string name="pizzaBaslik">Beef Cheese</string>
+    <string name="peynirYazi">Cheese</string>
+    <string name="Sosis">Sousage</string>
+    <string name="Zeytin">Olive</string>
+    <string name="Biber">Pepper</string>
+    <string name="Ulastir">Delivery</string>
+    <string name="PizzaAciklama">"Meat lover, get ready to meet your pizza !"</string>
+    <string name="SepeteEkle">ADD TO CHART</string>
+    <string name="FiyatYazi">$5.98</string>
+    <string name="TeslimatSure">20 min</string>
+    <string name="isim">Pizza</string>
+</resources>
