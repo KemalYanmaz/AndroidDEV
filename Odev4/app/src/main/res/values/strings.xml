@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Odev4</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="anasayfa">Rehber</string>
+    <string name="sayfaA">Kişiler</string>
+    <string name="sayfaB">Telefon Numarası</string>
+    <string name="sayfaX">Hızlı Arama</string>
+    <string name="sayfaY">Ara</string>
+    <string name="aranıyor">Aranıyor...</string>
+</resources>

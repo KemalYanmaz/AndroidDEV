@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.navigationcomponent.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/oyunEkraniGecis"
+            app:destination="@id/oyunEkrani"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/oyunEkrani"
+        android:name="com.example.navigationcomponent.OyunEkrani"
+        android:label="fragment_oyun_ekrani"
+        tools:layout="@layout/fragment_oyun_ekrani" >
+        <action
+            android:id="@+id/sonucEkraniGecis"
+            app:destination="@id/sonucEkrani"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/oyunEkrani"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="mesaj"
+            app:argType="string"
+            android:defaultValue="Mesaj Yok" />
+        <argument
+            android:name="yas"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="boy"
+            app:argType="float"
+            android:defaultValue="0.0" />
+        <argument
+            android:name="bekarMi"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="isim"
+            app:argType="string"
+            android:defaultValue="İsim Yok" />
+        <argument
+            android:name="nesne"
+            app:argType="com.example.navigationcomponent.Kisi" />
+    </fragment>
+    <fragment
+        android:id="@+id/sonucEkrani"
+        android:name="com.example.navigationcomponent.SonucEkrani"
+        android:label="fragment_sonuc_ekrani"
+        tools:layout="@layout/fragment_sonuc_ekrani" />
+</navigation>
