@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WidgetsKullanimi</string>
+    <string name="baslik">Başlık</string>
+    <string name="hint">Yazınız</string>
+    <string name="tikla">Oku</string>
+    <string name="Resim1">Resim 1</string>
+    <string name="Resim2">Resim 2</string>
+</resources>
