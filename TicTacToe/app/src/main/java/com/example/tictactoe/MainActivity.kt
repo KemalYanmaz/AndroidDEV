@@ -7,10 +7,14 @@ import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-   val game = TicTacToeGame()
+   val game = TicTacToeGame(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        tv_score_O.text = game.playerO.toString()
+        tv_score_X.text = game.playerX.toString()
+        game_state_textview.text=resources.getString(R.string.gameStartsWith)
 
         button00.setOnClickListener {
             pressed(0,0,it)
@@ -43,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             game.resetGame()
             clearTable()
-
+            game_state_textview.text=resources.getString(R.string.gameStartsWith)
         }
     }
     fun clearTable(){
@@ -62,5 +66,7 @@ class MainActivity : AppCompatActivity() {
         game.pressButtonAt(row,col)
         (it as Button).text=game.stringForButtonAt(row,col)
         game_state_textview.text=game.stringForGameState()
+        tv_score_O.text = game.playerO.toString()
+        tv_score_X.text = game.playerX.toString()
     }
 }

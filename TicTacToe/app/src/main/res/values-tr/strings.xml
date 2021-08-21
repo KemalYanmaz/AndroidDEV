@@ -1,0 +1,13 @@
+<resources>
+    <string name="x_turn">X Turu</string>
+    <string name="o_turn">O Turu</string>
+    <string name="x_wins">X Kazandı</string>
+    <string name="o_wins">O Kazandı</string>
+    <string name="tie_game">Oyun Berabere</string>
+    <string name="new_game">Yeni Oyun</string>
+    <string name="player_X">Oyuncu X</string>
+    <string name="space"> </string>
+    <string name="player_O">Oyuncu O</string>
+    <string name="gameStartsWith">Oyun X oyuncusu ile başlıyor</string>
+
+</resources>

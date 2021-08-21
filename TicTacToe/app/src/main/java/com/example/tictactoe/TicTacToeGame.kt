@@ -1,13 +1,15 @@
 package com.example.tictactoe
 
 import android.content.Context
+import android.content.ContextWrapper
 
-class TicTacToeGame {
+class TicTacToeGame(base: Context?) : ContextWrapper(base) {
 
     private var board:Array<Array<Mark>> = Array(NUM_ROWS){ Array(NUM_COLUMNS){Mark.MARK_NONE} }
     var gameState:GameState = GameState.X_TURN
 
-
+    var playerX = 0
+    var playerO = 0
     companion object{
         val NUM_ROWS=3
         val NUM_COLUMNS=3
@@ -31,10 +33,10 @@ class TicTacToeGame {
         resetGame()
     }
 
-    public fun getBoard():Array<Array<Mark>>{
+    fun getBoard():Array<Array<Mark>>{
         return this.board
     }
-    public fun isBoardFull():Boolean{
+    fun isBoardFull():Boolean{
         for(row in 0 until NUM_ROWS){
             for(col in 0 until NUM_COLUMNS){
                 if(board[row][col]==Mark.MARK_NONE){
@@ -82,12 +84,18 @@ class TicTacToeGame {
             gameState=GameState.X_TURN
         }
         if(isBoardFull()){
-            gameState=GameState.TIE_GAME
+            if(checkForWin(Mark.MARK_X)){
+                gameState=GameState.X_WINS
+            }
+            else if(checkForWin(Mark.MARK_O)){
+                gameState=GameState.O_WINS
+            }else{
+                gameState=GameState.TIE_GAME
+            }
         }
     }
 
-
-    public fun checkForWin(mark:Mark):Boolean{
+    private fun checkForWin(mark:Mark):Boolean{
         if(didVerticalWin(mark)||didDiagonalWin(mark)||didHorizontalWin(mark)||didReverseDiagonalWin(mark)){
             makeWinner()
             return true
@@ -98,8 +106,10 @@ class TicTacToeGame {
     private fun makeWinner(){
         if(gameState==GameState.X_TURN){
             gameState=GameState.X_WINS
-        }else{
+            playerX++
+        }else if(gameState==GameState.O_TURN){
             gameState=GameState.O_WINS
+            playerO++
         }
     }
     private fun didVerticalWin(mark:Mark):Boolean{
@@ -152,13 +162,13 @@ class TicTacToeGame {
         return false
     }
 
-    public fun stringForGameState():String{
+    fun stringForGameState(): String {
         return when(gameState){
-            GameState.X_TURN->"X Turn"
-            GameState.O_TURN->"O Turn"
-            GameState.X_WINS->"X Wins"
-            GameState.O_WINS->"O Wins"
-            GameState.TIE_GAME->"Tie Game"
+            GameState.X_TURN->baseContext.getString(R.string.x_turn)
+            GameState.O_TURN->baseContext.getString(R.string.o_turn)
+            GameState.X_WINS->baseContext.getString(R.string.x_wins)
+            GameState.O_WINS->baseContext.getString(R.string.o_wins)
+            GameState.TIE_GAME->baseContext.getString(R.string.tie_game)
         }
     }
 }
