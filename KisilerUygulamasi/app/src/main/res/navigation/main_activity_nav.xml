@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfa_Fragment">
+
+    <fragment
+        android:id="@+id/anasayfa_Fragment"
+        android:name="com.example.kisileruygulamasi.Anasayfa_Fragment"
+        android:label="fragment_anasayfa_"
+        tools:layout="@layout/fragment_anasayfa_" >
+        <action
+            android:id="@+id/kisi_Kayit_Gecis"
+            app:destination="@id/kisi_Kayit_Fragment" />
+        <action
+            android:id="@+id/kisi_detay_gecis"
+            app:destination="@id/kisi_Detay_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kisi_Detay_Fragment"
+        android:name="com.example.kisileruygulamasi.Kisi_Detay_Fragment"
+        android:label="fragment_kisi__detay_"
+        tools:layout="@layout/fragment_kisi__detay_" />
+    <fragment
+        android:id="@+id/kisi_Kayit_Fragment"
+        android:name="com.example.kisileruygulamasi.Kisi_Kayit_Fragment"
+        android:label="fragment_kisi__kayit_"
+        tools:layout="@layout/fragment_kisi__kayit_" />
+</navigation>
