@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/siparis_Fragment"
+        android:icon="@drawable/store"
+        android:title="@string/order"
+        android:textColorPrimary="@color/black"/>
+    <item
+        android:id="@+id/ara_Fragment"
+        android:icon="@drawable/search"
+        android:title="@string/search"/>
+    <item
+        android:id="@+id/sepetim_Fragment"
+        android:icon="@drawable/basket"
+        android:title="@string/basket"/>
+    <item
+        android:id="@+id/kampanyalar_Fragment"
+        android:icon="@drawable/campaign"
+        android:title="@string/campaigns"/>
+    <item
+        android:id="@+id/diger_Fragment"
+        android:icon="@drawable/more"
+        android:title="@string/other"/>
+</menu>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/siparis_Fragment">
+
+    <fragment
+        android:id="@+id/siparis_Fragment"
+        android:name="com.example.odev5.Siparis_Fragment"
+        android:label="fragment_anasayfa_"
+        tools:layout="@layout/fragment_siparis" />
+    <fragment
+        android:id="@+id/ara_Fragment"
+        android:name="com.example.odev5.Ara_Fragment"
+        android:label="fragment_ara_"
+        tools:layout="@layout/fragment_ara_" />
+    <fragment
+        android:id="@+id/diger_Fragment"
+        android:name="com.example.odev5.DigerFragment"
+        android:label="fragment_diger"
+        tools:layout="@layout/fragment_diger" />
+    <fragment
+        android:id="@+id/sepetim_Fragment"
+        android:name="com.example.odev5.Sepetim_Fragment"
+        android:label="fragment_sepetim_"
+        tools:layout="@layout/fragment_sepetim_" />
+    <fragment
+        android:id="@+id/kampanyalar_Fragment"
+        android:name="com.example.odev5.Kampanyalar_Fragment"
+        android:label="fragment_kampanyalar_"
+        tools:layout="@layout/fragment_kampanyalar_" />
+</navigation>

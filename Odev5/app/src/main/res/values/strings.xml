@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Odev5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--MENU-->
+    <string name="order">Sipariş</string>
+    <string name="search">Ara</string>
+    <string name="basket">Sepetim</string>
+    <string name="campaigns">Kampanyalar</string>
+    <string name="other">Diğer</string>
+    <string name="house">Ev</string>
+
+</resources>
