@@ -3,28 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_activity_nav"
-    app:startDestination="@id/anasayfa_Fragment">
+    app:startDestination="@id/anasayfaFragment">
 
     <fragment
-        android:id="@+id/anasayfa_Fragment"
-        android:name="com.example.kisileruygulamasi.Anasayfa_Fragment"
-        android:label="fragment_anasayfa_"
-        tools:layout="@layout/fragment_anasayfa_" >
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.kisileruygulamasi.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
         <action
-            android:id="@+id/kisi_Kayit_Gecis"
-            app:destination="@id/kisi_Kayit_Fragment" />
+            android:id="@+id/kisiDetayGecis"
+            app:destination="@id/kisiDetayFragment" />
         <action
-            android:id="@+id/kisi_detay_gecis"
-            app:destination="@id/kisi_Detay_Fragment" />
+            android:id="@+id/kisiKayitGecis"
+            app:destination="@id/kisiKayitFragment" />
     </fragment>
     <fragment
-        android:id="@+id/kisi_Detay_Fragment"
-        android:name="com.example.kisileruygulamasi.Kisi_Detay_Fragment"
-        android:label="fragment_kisi__detay_"
-        tools:layout="@layout/fragment_kisi__detay_" />
+        android:id="@+id/kisiKayitFragment"
+        android:name="com.example.kisileruygulamasi.fragment.KisiKayitFragment"
+        android:label="fragment_kisi_kayit"
+        tools:layout="@layout/fragment_kisi_kayit" />
     <fragment
-        android:id="@+id/kisi_Kayit_Fragment"
-        android:name="com.example.kisileruygulamasi.Kisi_Kayit_Fragment"
-        android:label="fragment_kisi__kayit_"
-        tools:layout="@layout/fragment_kisi__kayit_" />
+        android:id="@+id/kisiDetayFragment"
+        android:name="com.example.kisileruygulamasi.fragment.KisiDetayFragment"
+        android:label="fragment_kisi_detay"
+        tools:layout="@layout/fragment_kisi_detay" >
+        <argument
+            android:name="nesne"
+            app:argType="com.example.kisileruygulamasi.entity.Kisiler" />
+    </fragment>
 </navigation>
