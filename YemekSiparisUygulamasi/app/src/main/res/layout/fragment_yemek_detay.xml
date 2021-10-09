@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="yemekDetayNesnesi"
+            type="com.example.yemeksiparisuygulamasi.fragment.YemekDetayFragment" />
+
+        <variable
+            name="sepetTutari"
+            type="Float" />
+
+        <variable
+            name="yemek"
+            type="com.example.yemeksiparisuygulamasi.entity.SepettekiYemek" />
+
+        <variable
+            name="viewModel"
+            type="com.example.yemeksiparisuygulamasi.viewmodel.YemekDetayViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.YemekDetayFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_sepetTutari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{String.valueOf((Float.valueOf(yemek.adet)*yemek.fiyat))+" ₺"}'
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn_eksi_bir"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="24dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:onClick="@{()->viewModel.adetAzalt(1)}"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="-1"
+                    android:enabled="@{(yemek.adet>=1)}"
+                    app:cornerRadius="100dp"
+                    app:iconPadding="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_eksi_bes"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_eksi_bes"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:onClick="@{()->viewModel.adetAzalt(5)}"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="0dp"
+                    android:enabled="@{(yemek.adet>=5)}"
+                    android:text="-5"
+                    app:cornerRadius="100dp"
+                    app:iconPadding="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@{yemek.adet>=10?@color/PURPLE:@color/GREEN}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_urunResmi"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="80dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_urunAdi2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@{yemek.ad}"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_urunResmi" />
+
+                    <TextView
+                        android:id="@+id/tv_urunFiyat2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginBottom="32dp"
+                        android:text='@{String.valueOf(yemek.fiyat)+" ₺"}'
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_urunAdi2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_campaign_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="34sp"
+                android:text="@{String.valueOf(yemek.adet)}"
+                app:layout_constraintBottom_toTopOf="@+id/btn_arti_bes"
+                app:layout_constraintEnd_toStartOf="@+id/btn_arti_bir"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_eksi_bir"
+                app:layout_constraintTop_toBottomOf="@+id/btn_arti_bir" />
+
+            <Button
+                android:id="@+id/btn_arti_bir"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="24dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:onClick="@{()->viewModel.adetArttir(1)}"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:text="+1"
+                app:cornerRadius="100dp"
+                app:iconPadding="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_arti_bes"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/btn_arti_bes"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="32dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:onClick="@{()->viewModel.adetArttir(5)}"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:text="+5"
+                app:cornerRadius="100dp"
+                app:iconPadding="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
